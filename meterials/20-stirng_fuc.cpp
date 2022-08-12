@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-string dopa = "amum is best";
+string dopa = "amumu is best";
 
 int main() {
   ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
   cout << dopa << "\n";
+  cout << dopa.find(" ") << "\n";
   if (dopa.find("amumu") != string::npos) {
     cout << "dopa속에 아무무있다!" << "\n";
   }
