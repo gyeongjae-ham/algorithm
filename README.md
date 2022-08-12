@@ -112,3 +112,46 @@
 
 g++ -std=c++14 -Wall a.cpp -o test.out
 ./test.out
+
+# <bits/stdc++.h> 사용못할 경우
+
+## iostream의 함수들
+
+- swap
+- getline
+- clear
+- fill
+- tie
+- precision
+- sync_with_stdio
+- cin
+- cout
+- stdio.h의 함수들
+- printf
+- scanf
+- puts
+
+## string.h의 함수들
+
+- memcpy
+- memset
+- size_t
+
+## algorithm의 함수들 ● find
+
+- swap
+- fill
+- remove
+- unique
+- rotate
+- shuffle
+- sort
+- stable_sort
+- lower_bound
+- upper_bound
+- min
+- max
+- min_element
+- max_element
+- next_permutation
+- prev_permutation
