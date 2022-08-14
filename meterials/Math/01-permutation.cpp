@@ -3,6 +3,7 @@
 //* next_permutation - 오름차순 배열 기반 순열
 //* prev_permutation - 내림차순 배열 기반 순열
 //* 범위는 [first, last) 시작은 포함, 끝은 포함 x
+//* 순열 공식 = n! / (n-r)!
 
 using namespace std;
 
