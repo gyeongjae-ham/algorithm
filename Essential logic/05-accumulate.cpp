@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-//* 배열의 합J
+//* 배열의 합
 
 int main() {
   ios::sync_with_stdio(false);
