@@ -19,23 +19,10 @@ bool isPrime(int x) {
   if (x % 2 == 0) return 0;
 
   for (int i = 2; i * i <= x; i++) {
-    if (n % i == 0) return 0;
+    if (x % i == 0) return 0;
   }
-
   return 1;
 }
-
-// bool isPrime(int x) {
-//   if (x == 1) return 0;
-//   bool flag = 1;
-//   for (int i = 2; i < x; i++) {
-//     if (x % i == 0) {
-//       flag = 0;
-//       break;
-//     }
-//   }
-//   return flag;
-// }
 
 int main() {
   ios::sync_with_stdio(false);
@@ -43,16 +30,12 @@ int main() {
   cout.tie(NULL);
 
   cin >> n;
-  tmp = reverse(n);
-  cout << typeid(tmp).name() << "\n";
-  bool result = isPrime(tmp);
-  cout << result << "\n";
 
-  // for (int i = 0; i < n; i++) {
-  //   cin >> num;
-  //   tmp = reverse(num);
-  //   if (isPrime(tmp)) cout << tmp << " ";
-  // }
-  // cout << "\n";
+  for (int i = 0; i < n; i++) {
+    cin >> num;
+    tmp = reverse(num);
+    if (isPrime(tmp)) cout << tmp << " ";
+  }
+  cout << "\n";
   return 0;
 }
