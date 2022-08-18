@@ -24,7 +24,10 @@ int main() {
     }
   }
 
-  cout << max << "\n";
+  if (max == 0)
+    cout << -1 << "\n";
+  else
+    cout << max << "\n";
 
   return 0;
 }
