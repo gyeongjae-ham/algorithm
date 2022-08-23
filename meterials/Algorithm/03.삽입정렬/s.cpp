@@ -1,6 +1,5 @@
-#include <stdio.h>
-
 #include <algorithm>
+#include <iostream>
 #include <vector>
 
 using namespace std;
