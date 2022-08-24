@@ -42,6 +42,21 @@ class NodeMgmt:
                 else:
                     node = node.next
 
+    def find(self, data):
+        if self.head == "":
+            print("해당 값을 가진 노드가 없습니다")
+            return
+        else:
+            node = self.head
+            while node:
+                if node.data == data:
+                    print("찾았습니다!", data)
+                    return
+                else:
+                    node = node.next
+            print("해당 데이터는 리스트에 없습니다.")
+            return
+
 
 linkedlist1 = NodeMgmt(0)
 
@@ -50,6 +65,8 @@ for data in range(1, 10):
 
 linkedlist1.desc()
 print("====================")
-linkedlist1.delete(0)
-linkedlist1.desc()
-print(linkedlist1.head)
+# linkedlist1.delete(0)
+# linkedlist1.desc()
+# print(linkedlist1.head)
+
+linkedlist1.find(11)
