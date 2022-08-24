@@ -1,5 +1,8 @@
 import queue
 
+# * 가장 먼저 넣은 데이터를 가장 먼저 꺼낼 수 있는 구조
+# * FIFO 방식으로 스택과 꺼내는 순서가 반대
+
 # * FIFO queue
 data_queue = queue.Queue()
 
