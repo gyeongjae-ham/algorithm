@@ -10,7 +10,7 @@
     - 저장공간 활용도를 높이기 위한 기법
 """
 
-# * Chaining 기법
+# * Linear Probing 기법
 hash_table = [0 for _ in range(8)]
 
 
@@ -27,13 +27,15 @@ def save_data(data, value):
     hash_address = hash_function(index_key)
 
     if hash_table[hash_address] != 0:
-        for index in range(len(hash_table[hash_address])):
-            if hash_table[hash_address][index][0] == index_key:
-                hash_table[hash_address][index][1] = value
+        for index in range(hash_address, len(hash_table)):
+            if hash_table[index] == 0:
+                hash_table[index] = [index_key, value]
                 return
-        hash_table[hash_address].append([index_key, value])
+            elif hash_table[index][0] == index_key:
+                hash_table[index][1] = value
+                return
     else:
-        hash_table[hash_address] = [[index_key, value]]
+        hash_table[hash_address] = [index_key, value]
 
 
 def read_data(data):
@@ -41,9 +43,10 @@ def read_data(data):
     hash_address = hash_function(index_key)
 
     if hash_table[hash_address] != 0:
-        for index in range(len(hash_table[hash_address])):
-            if hash_table[hash_address][index][0] == index_key:
-                return hash_table[hash_address][index][1]
-        return None
+        for index in range(hash_address, len(hash_table)):
+            if hash_table[index] == 0:
+                return None
+            elif hash_table[index][0] == index_key:
+                return hash_table[index][1]
     else:
         return None
