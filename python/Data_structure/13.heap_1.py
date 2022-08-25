@@ -27,3 +27,49 @@
         - 힙은 왼쪽 및 오른쪽 자식 노드의 값은 오른쪽이 클 수도, 왼쪽이 클 수도 있다
 - 이진 탐색 트리는 탐색을 위한 구조, 힙은 최대/최소값 검색을 위한 구조 중 하나로 이해하면 된다
 """
+
+
+class Heap:
+    def __init__(self, data):
+        self.heap_array = list()
+        self.heap_array.append(None)
+        self.heap_array.append(data)
+
+    def move_up(self, inserted_idx):
+        if inserted_idx <= 1:
+            return False
+
+        parent_idx = inserted_idx // 2
+        if self.heap_array[inserted_idx] > self.heap_array[parent_idx]:
+            return True
+        else:
+            return False
+
+    def insert(self, data):
+        if len(self.heap_array) == 0:
+            self.heap_array.append(None)
+            self.heap_array.append(data)
+            return True
+
+        self.heap_array.append(data)
+        inserted_idx = len(self.heap_array) - 1
+
+        while self.move_up(inserted_idx):
+            parent_idx = inserted_idx // 2
+            self.heap_array[inserted_idx], self.heap_array[parent_idx] = (
+                self.heap_array[parent_idx],
+                self.heap_array[inserted_idx],
+            )
+            inserted_idx = parent_idx
+
+        return True
+
+
+heap = Heap(15)
+heap.insert(10)
+heap.insert(8)
+heap.insert(5)
+heap.insert(4)
+heap.insert(20)
+
+print(heap.heap_array)
