@@ -1,3 +1,5 @@
+import random
+
 """
 삭제의 경우
 1. Leaf Node 삭제
@@ -135,3 +137,28 @@ class NodeMgmt:
                 self.parent.right = self.change_node
                 self.change_node.right = self.current_node.right
                 self.change_node.left = self.current_node.left
+
+
+# * 1~1000 중에 임의로 100개를 입력, 검색, 삭제
+
+bst_nums = set()
+while len(bst_nums) != 100:
+    bst_nums.add(random.randint(0, 999))
+
+head = Node(500)
+binary_tree = NodeMgmt(head)
+for num in bst_nums:
+    binary_tree.insert(num)
+
+for num in bst_nums:
+    if binary_tree.search(num) == False:
+        print("search failed", num)
+
+delete_nums = set()
+bst_nums = list(bst_nums)
+while len(delete_nums) != 10:
+    delete_nums.add(bst_nums[random.randint(0, 99)])
+
+for del_num in delete_nums:
+    if binary_tree.delete(del_num) == False:
+        print("delete failed", num)
