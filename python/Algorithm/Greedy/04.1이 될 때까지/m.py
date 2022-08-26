@@ -1,0 +1,19 @@
+import time
+
+start_time = time.time()
+
+n, k = map(int, input().split())
+
+cnt = 0
+while n != 1:
+    if n % k == 0:
+        n /= k
+        cnt += 1
+    else:
+        n -= 1
+        cnt += 1
+
+print(cnt)
+
+end_time = time.time()
+print('time :', end_time - start_time)
