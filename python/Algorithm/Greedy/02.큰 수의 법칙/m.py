@@ -26,3 +26,5 @@ print(res)
 
 end_time = time.time()
 print('time :', end_time - start_time)
+
+# M의 크기가 커진다면 시간초과 판정이 나온다
