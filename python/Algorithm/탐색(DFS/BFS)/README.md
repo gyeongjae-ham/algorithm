@@ -8,3 +8,8 @@
 
 - 스택 : list 사용하자 append, pop
 - 큐: from collections import deque 사용 append, popleft
+
+## 재귀 함수
+
+- <span style='background-color: #fff5b1'><span style='color: black'>자기 자신을 다시 호출하는 함수</span></span>를 의미한다
+- 어느 정도 출력하다가 최대 재귀 깊이 초과 메시지가 출력된다
