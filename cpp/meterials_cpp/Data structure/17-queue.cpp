@@ -8,16 +8,16 @@
 using namespace std;
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  queue<int> q;
-  q.push(1);
-  cout << q.front() << "\n";
+    queue<int> q;
+    q.push(1);
+    cout << q.front() << "\n";
 
-  q.pop();
-  cout << q.size() << "\n";
+    q.pop();
+    cout << q.size() << "\n";
 
-  return 0;
+    return 0;
 }

@@ -3,8 +3,10 @@
 using namespace std;
 
 int main() {
-  ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-  char a = 'a';
-  cout << (int)a << "\n";
-  return 0;
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    char a = 'a';
+    cout << (int)a << "\n";
+    return 0;
 }

@@ -14,21 +14,21 @@ d: 자릿 수
 res: 지금까지 센 숫자의 자릿수의 총 개수
 */
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  cin >> n;
-  while (sum + cnt < n) {
-    res = res + (cnt * d);
-    sum = sum + cnt;
-    d++;
-    cnt *= 10;
-  }
-  res = res + ((n - sum) * d);  //* 중간에 빠져나온 자릿수에 현재까지 세고
-                                //* 남은 숫자의 개수를 곱해준다
+    cin >> n;
+    while (sum + cnt < n) {
+        res = res + (cnt * d);
+        sum = sum + cnt;
+        d++;
+        cnt *= 10;
+    }
+    res = res + ((n - sum) * d); //* 중간에 빠져나온 자릿수에 현재까지 세고
+                                 //* 남은 숫자의 개수를 곱해준다
 
-  cout << res << "\n";
+    cout << res << "\n";
 
-  return 0;
+    return 0;
 }

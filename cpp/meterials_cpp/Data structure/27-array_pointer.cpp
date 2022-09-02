@@ -10,13 +10,14 @@ void go(int a[]) { a[2] = 100; }
 int a[3] = {1, 2, 3};
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  go(a);
+    go(a);
 
-  for (int i : a) cout << i << "\n";
+    for (int i : a)
+        cout << i << "\n";
 
-  return 0;
+    return 0;
 }

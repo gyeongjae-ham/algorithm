@@ -8,17 +8,16 @@ using namespace std;
 priority_queue<int, vector<int>, greater<int>> pq; // 오름차순
 // priority_queue<int, vector<int>, less<int>> pq;   // 내림차순
 
-int main()
-{
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  pq.push(5);
-  pq.push(4);
-  pq.push(3);
-  pq.push(2);
-  pq.push(1);
-  cout << pq.top() << "\n";
-  return 0;
+    pq.push(5);
+    pq.push(4);
+    pq.push(3);
+    pq.push(2);
+    pq.push(1);
+    cout << pq.top() << "\n";
+    return 0;
 }

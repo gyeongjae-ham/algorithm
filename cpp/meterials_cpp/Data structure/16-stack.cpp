@@ -10,20 +10,20 @@ using namespace std;
 stack<string> stk;
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  stk.push("ham");
-  stk.push("gj");
-  stk.push("화");
-  stk.push("이");
-  stk.push("팅");
+    stk.push("ham");
+    stk.push("gj");
+    stk.push("화");
+    stk.push("이");
+    stk.push("팅");
 
-  while (stk.size()) {
-    cout << stk.top() << "\n";
-    stk.pop();
-  }
+    while (stk.size()) {
+        cout << stk.top() << "\n";
+        stk.pop();
+    }
 
-  return 0;
+    return 0;
 }

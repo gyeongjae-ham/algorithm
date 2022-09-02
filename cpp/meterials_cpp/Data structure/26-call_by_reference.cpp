@@ -11,17 +11,17 @@ void go(int &idx) { idx = 1; }
 void go2(int idx) { idx = 100; }
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  go(idx);
-  cout << idx << "\n";
+    go(idx);
+    cout << idx << "\n";
 
-  go2(idx);
-  cout << idx << "\n";
+    go2(idx);
+    cout << idx << "\n";
 
-  return 0;
+    return 0;
 }
 
 //? 주소는 메모리의 위치

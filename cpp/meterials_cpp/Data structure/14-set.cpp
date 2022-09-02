@@ -8,26 +8,26 @@
 using namespace std;
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  set<pair<string, int>> st;
-  st.insert({"test", 1});
-  st.insert({"test", 1});
-  st.insert({"test", 1});
-  st.insert({"test", 1});
+    set<pair<string, int>> st;
+    st.insert({"test", 1});
+    st.insert({"test", 1});
+    st.insert({"test", 1});
+    st.insert({"test", 1});
 
-  cout << st.size() << "\n";
+    cout << st.size() << "\n";
 
-  set<int> st2;
-  st2.insert(1);
-  st2.insert(2);
-  st2.insert(2);
+    set<int> st2;
+    st2.insert(1);
+    st2.insert(2);
+    st2.insert(2);
 
-  for (auto it : st2) {
-    cout << it << "\n";
-  }
+    for (auto it : st2) {
+        cout << it << "\n";
+    }
 
-  return 0;
+    return 0;
 }

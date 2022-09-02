@@ -6,17 +6,18 @@
 using namespace std;
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  queue<int> q;
-  for (int i = 1; i <= 10; i++) q.push(i);
+    queue<int> q;
+    for (int i = 1; i <= 10; i++)
+        q.push(i);
 
-  while (q.size()) {
-    cout << q.front() << "\n";
-    q.pop();
-  }
+    while (q.size()) {
+        cout << q.front() << "\n";
+        q.pop();
+    }
 
-  return 0;
+    return 0;
 }

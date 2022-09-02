@@ -13,41 +13,41 @@ using namespace std;
 int v[10];
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  unordered_map<string, int> umap;
-  // 넣는 방법 1
-  umap.insert({"test1", 1});
+    unordered_map<string, int> umap;
+    // 넣는 방법 1
+    umap.insert({"test1", 1});
 
-  // 넣는 방법 2
-  umap.emplace("test5", 5);
+    // 넣는 방법 2
+    umap.emplace("test5", 5);
 
-  // 변경
-  umap["test1"] = 4;
+    // 변경
+    umap["test1"] = 4;
 
-  for (auto element : umap) {
-    cout << element.first << " : " << element.second << "\n";
-  }
+    for (auto element : umap) {
+        cout << element.first << " : " << element.second << "\n";
+    }
 
-  // map의 find 메서드는 찾지 못하면 end() 이터레이터를 반환한다
-  auto search = umap.find("test4");
-  if (search != umap.end()) {
-    cout << "found : " << search->first << " " << (*search).second << "\n";
-  } else {
-    cout << "not found.."
-         << "\n";
-  }
+    // map의 find 메서드는 찾지 못하면 end() 이터레이터를 반환한다
+    auto search = umap.find("test4");
+    if (search != umap.end()) {
+        cout << "found : " << search->first << " " << (*search).second << "\n";
+    } else {
+        cout << "not found.."
+             << "\n";
+    }
 
-  // 이런식으로 int형 증가 가능
-  umap["test1"]++;
-  cout << umap["test1"] << "\n";
+    // 이런식으로 int형 증가 가능
+    umap["test1"]++;
+    cout << umap["test1"] << "\n";
 
-  // 지우기
-  cout << umap.size() << "\n";
-  umap.erase("test1");
-  cout << umap.size() << "\n";
+    // 지우기
+    cout << umap.size() << "\n";
+    umap.erase("test1");
+    cout << umap.size() << "\n";
 
-  return 0;
+    return 0;
 }

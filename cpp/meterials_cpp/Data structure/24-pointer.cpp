@@ -12,15 +12,15 @@
 using namespace std;
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  string a = "abcda";
-  string* b = &a;
-  cout << b << "\n";
-  cout << *b << "\n";
-  return 0;
+    string a = "abcda";
+    string *b = &a;
+    cout << b << "\n";
+    cout << *b << "\n";
+    return 0;
 }
 
 //? (pointer_name) -> (variable_name) 이렇게 값을 꺼낼 수도 있고,

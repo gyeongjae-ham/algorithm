@@ -12,24 +12,27 @@ using namespace std;
 int v[10];
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  for (int i = 1; i <= 10; i++) v[i - 1] = i;
-  for (int a : v) cout << a << " ";
-  cout << "\n";
+    for (int i = 1; i <= 10; i++)
+        v[i - 1] = i;
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
 
-  auto a = find(v, v + 10, 100);
-  if (a == v + 10)
-    cout << "not found"
-         << "\n";
+    auto a = find(v, v + 10, 100);
+    if (a == v + 10)
+        cout << "not found"
+             << "\n";
 
-  fill(v, v + 10, 10);
-  for (int a : v) cout << a << " ";
-  cout << "\n";
+    fill(v, v + 10, 10);
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
 
-  return 0;
+    return 0;
 }
 
 //* erase, push_back 등의 메서드가 없다

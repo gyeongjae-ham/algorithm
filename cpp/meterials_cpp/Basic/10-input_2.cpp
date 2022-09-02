@@ -11,13 +11,18 @@ using namespace std;
 0000
 */
 
+int n, m;
+string s;
+
 // * string으로 변환
 int main() {
-  ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-  cin >> n >> m;
-  for (int i =0; i<n; i++) {
-    cin >> s;
-  }
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    cin >> n >> m;
+    for (int i = 0; i < n; i++) {
+        cin >> s;
+    }
 }
 
 // 이 후 형변환으로 문제를 풀거나 해야 한다

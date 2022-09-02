@@ -7,19 +7,21 @@ using namespace std;
 vector<int> v;
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  for (int i = 1; i <= 6; i++) v.push_back(i);
-  int i = 1;
-  int temp = v[i];
-  v[i] = v[i + 1];
-  v[i + 1] = v[i + 2];
-  v[i + 2] = v[i + 3];
-  v[i + 3] = temp;
+    for (int i = 1; i <= 6; i++)
+        v.push_back(i);
+    int i = 1;
+    int temp = v[i];
+    v[i] = v[i + 1];
+    v[i + 1] = v[i + 2];
+    v[i + 2] = v[i + 3];
+    v[i + 3] = temp;
 
-  for (int i : v) cout << i << " ";
+    for (int i : v)
+        cout << i << " ";
 
-  return 0;
+    return 0;
 }

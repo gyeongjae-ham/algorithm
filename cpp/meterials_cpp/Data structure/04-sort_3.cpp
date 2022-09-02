@@ -10,17 +10,18 @@ vector<pair<int, int>> v;
 bool cmp(pair<int, int> a, pair<int, int> b) { return a.first > b.first; }
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  for (int i = 10; i >= 1; i--) {
-    v.push_back({i, 10 - i});
-  }
+    for (int i = 10; i >= 1; i--) {
+        v.push_back({i, 10 - i});
+    }
 
-  sort(v.begin(), v.end(), cmp);
+    sort(v.begin(), v.end(), cmp);
 
-  for (auto it : v) cout << it.first << " : " << it.second << "\n";
+    for (auto it : v)
+        cout << it.first << " : " << it.second << "\n";
 
-  return 0;
+    return 0;
 }

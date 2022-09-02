@@ -6,17 +6,18 @@ using namespace std;
 map<int, int> mp;
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  if (mp[1] == 0) {
-    mp[1] = 2;
-  }
+    if (mp[1] == 0) {
+        mp[1] = 2;
+    }
 
-  for (auto i : mp) cout << i.first << " " << i.second;
+    for (auto i : mp)
+        cout << i.first << " " << i.second;
 
-  return 0;
+    return 0;
 }
 
 //* map과 unordered_map의 차이

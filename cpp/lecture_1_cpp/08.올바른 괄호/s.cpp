@@ -5,29 +5,29 @@ string s;
 stack<char> stk;
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  cin >> s;
+    cin >> s;
 
-  for (int i = 0; i < s.length(); i++) {
-    if (s[i] == '(') {
-      stk.push('(');
-    } else {
-      if (!stk.empty() && stk.top() == '(')
-        stk.pop();
-      else
-        stk.push(')');
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] == '(') {
+            stk.push('(');
+        } else {
+            if (!stk.empty() && stk.top() == '(')
+                stk.pop();
+            else
+                stk.push(')');
+        }
     }
-  }
 
-  if (stk.empty())
-    cout << "YES"
-         << "\n";
-  else
-    cout << "NO"
-         << "\n";
+    if (stk.empty())
+        cout << "YES"
+             << "\n";
+    else
+        cout << "NO"
+             << "\n";
 
-  return 0;
+    return 0;
 }

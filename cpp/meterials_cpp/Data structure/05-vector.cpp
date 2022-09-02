@@ -9,43 +9,49 @@ using namespace std;
 // * 맨뒤나 맨앞이 아닌 요소를 삭제하고 삽입하는데 O(n)이 걸린다
 
 vector<int> v;
-vector<int> v2(5, 100);  // 크기 5인 vector를 선언하고 100으로 채운 모습
+vector<int> v2(5, 100); // 크기 5인 vector를 선언하고 100으로 채운 모습
 
 int main() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-  for (int i = 1; i <= 10; i++) v.push_back(i);
-  for (int a : v) cout << a << " ";
-  cout << "\n";
-  v.pop_back();
+    for (int i = 1; i <= 10; i++)
+        v.push_back(i);
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
+    v.pop_back();
 
-  for (int a : v) cout << a << " ";
-  cout << "\n";
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
 
-  v.erase(v.begin(), v.begin() + 1);
+    v.erase(v.begin(), v.begin() + 1);
 
-  for (int a : v) cout << a << " ";
-  cout << "\n";
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
 
-  auto a = find(v.begin(), v.end(), 100);
-  if (a == v.end())
-    cout << "not found"
-         << "\n";
+    auto a = find(v.begin(), v.end(), 100);
+    if (a == v.end())
+        cout << "not found"
+             << "\n";
 
-  fill(v.begin(), v.end(), 10);
+    fill(v.begin(), v.end(), 10);
 
-  for (int a : v) cout << a << " ";
-  cout << "\n";
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
 
-  v.clear();
-  cout << "아무것도 없을까?\n";
+    v.clear();
+    cout << "아무것도 없을까?\n";
 
-  for (int a : v) cout << a << " ";
-  cout << "\n";
+    for (int a : v)
+        cout << a << " ";
+    cout << "\n";
 
-  return 0;
+    return 0;
 }
 
 // * 뒤부터 요소를 더하는 push_back(), 맨 뒤부터 지우는 pop_back()
